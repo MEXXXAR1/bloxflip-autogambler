@@ -1,27 +1,29 @@
-{
-    "auth": "",
-    "bet": {
-        "game": "crash",
-        "tries": 14,
-        "starting_bet": 0,
-        "crash_autocashout": 2,
-        "roulette_color": "red"
-    },
-    "rain": {
-        "enabled": true,
-        "minimum": 0,
-        "notifications": {
-            "os_notifs": false,
-            "webhook": {
-                "enabled": false,
-                "link": "",
-                "ping_id": "@everyone // <@USERID>"
-            }
+auth: 3CM+Jf14kZOXz7AtQ2pR9jzH4UVm9d5Ro2zM/XTfa1PCQQxTr1C3Oj2zzojD9FhsxiXlL360fpCXm6SOF3pDA19Noz719HZooudEHjurLcftGGjydearR4BdnqmMb2D3lILcbK+/IK+WU8vwtSPmvhScZAXCuF6Dni8eueybnPkB1/XMkeFB64FJH6YqQuxzyiSDwsHg57+DzXOg0wRE5niiyeZVhlx1eRe0vIM0kK4130MPUxBT2qkQ1yLuyYSY7mZa11fLFmwMsaXUvr442/F14pUXHa0jPwvnmM6v0RL2FFFNYqJsnbGGe1aV2T/3UqB9rwGlv1Sb187KaczMpIFTjNWfI2nAW5L4KnwsdZbjTjojzp3pmAA5kbs1TeeE
+
+
+bet: {
+    game: "roulette" or "crash" (Game you want to bet on)
+    tries: How many times your balance will be divided to 2
+    starting_bet: Custom starting bet tries will be ignored if this is set
+    crash_autocashout: At what multiplier you want to cashout, only works in crash
+    roulette_color: "purple", "red", or "yellow" (Color to bet on, only works in roulette)
+}
+
+rain: {
+    enabled: Toggle rain notifications
+    minimum: Minimum robux to notify
+    notifications: {
+        os_notifs: Toggle sending OS notifications
+        webhook: {
+            enabled: Toggle sending webhook embeds
+            link: Discord Webhook link
+            ping_id: User/Role ID to ping.
         }
-    },
-    // For debugging purposes only, dont touch if you dont know what you are doing
-    "debugging": {
-        "reports": true,
-        "verbose": true
     }
+}
+
+// For debugging purposes only dont touch if you dont know what you are doing
+debugging: {
+    quarterly_reports: Toggle reports.
+    verbose: Toggle info logs.
 }
